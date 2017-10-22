@@ -563,6 +563,7 @@ void BitcoinMiner(CWallet *pwallet, bool fProofOfStake)
 
             if (fProofOfStake && fPoSCancel)  // if we tried to create PoS block and failed - sleep
             {
+                LogPrintf("we tried to create PoS block and failed - sleep\n");
                 MilliSleep(pos_timio);
                 continue;
             }

@@ -1256,22 +1256,27 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const
             const uint256& wtxid = it->first;
             const CWalletTx* pcoin = &(*it).second;
 
-            if (!IsFinalTx(*pcoin))
+            if (!IsFinalTx(*pcoin)) {
+                LogPrintf("%s", "not final");
                 continue;
-
-            if (fOnlyConfirmed && !pcoin->IsTrusted())
+            }
+            if (fOnlyConfirmed && !pcoin->IsTrusted()) {
+                LogPrintf("%s", "not confirmed");
                 continue;
-
-            if (nSpendTime > 0 && pcoin->nTime > nSpendTime)
+            }
+            if (nSpendTime > 0 && pcoin->nTime > nSpendTime) {
+                LogPrintf("%s", "not spendable");
                 continue;  // ppcoin: timestamp must not exceed spend time
-
-            if ((pcoin->IsCoinBase() || pcoin->IsCoinStake()) && pcoin->GetBlocksToMaturity() > 0)
+            }
+            if ((pcoin->IsCoinBase() || pcoin->IsCoinStake()) && pcoin->GetBlocksToMaturity() > 0) {
+                LogPrintf("%s", "not cb nor cs nor m");
                 continue;
-
+            }
             int nDepth = pcoin->GetDepthInMainChain();
-            if (nDepth < 0)
+            if (nDepth < 0) {
+                LogPrintf("%s", "not depth");
                 continue;
-
+            }
             for (unsigned int i = 0; i < pcoin->vout.size(); i++)
             {
                 // ignore namecoin TxOut

@@ -1228,7 +1228,7 @@ bool GuessPoS(const CBlockHeader& header)
     // emercoin: in our official blockchain we currently have max PoS == 37.4635 (for blocks 1..129646)
     // it is probably safe to assume that it won't go over 1000
     // it is also probably safe to assume, that PoW difficulty will never drop to 1000 or below (it would require less than 7.15 GH/S of mining power over entire network!)
-    return GetDifficulty(header.nBits) <= 1000 ? true : false;
+    return GetDifficulty(header.nBits) <= 1 ? true : false;
 }
 
 CAmount GetProofOfWorkReward(unsigned int nHeight)
@@ -1268,12 +1268,12 @@ bool IsInitialBlockDownload()
 
       if (fImporting || fReindex)
         break; // ret true
-
+/*
       int cah = chainActive.Height();
 
-      if(cah < Checkpoints::GetTotalBlocksEstimate() || cah < pindexBestHeader->nHeight - 24 * 6)
+      if(cah <= Checkpoints::GetTotalBlocksEstimate() || cah <= pindexBestHeader->nHeight)
         break; // ret true
-
+*/
       rc = pindexBestHeader->GetBlockTime() < GetTime() - chainParams.MaxTipAge();
 
     } while(false);

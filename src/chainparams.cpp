@@ -116,9 +116,9 @@ public:
         nStakeTargetSpacing = 8 * 60;                // 8 minutes
         nTargetSpacingMax = 12 * nStakeTargetSpacing; // ~2 hours
         nStakeMinAge = 60;             // minimum age for coin age
-        nStakeMaxAge = 60 * 60 * 24 * 90;             // stake age of full weight
+        nStakeMaxAge = 90;             // stake age of full weight
         nStakeModifierInterval = 6 * 60 * 60;         // time to elapse before new modifier is computed
-        nMaxTipAge = 24 * 60 * 60;
+        nMaxTipAge = 7 * 24 * 60 * 60;
 
         /**
          * Build the genesis block. Note that the output of the genesis coinbase cannot

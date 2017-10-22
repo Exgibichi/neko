@@ -357,7 +357,7 @@ bool CheckStakeKernelHash(unsigned int nBits, const CBlock& blockFrom, unsigned 
     // this change increases active coins participating the hash and helps
     // to secure the network when proof-of-stake difficulty is low
     int64_t nTimeWeight = min((int64_t)nTimeTx - txPrev.nTime, Params().StakeMaxAge()) - (IsProtocolV03(nTimeTx)? Params().StakeMinAge() : 0);
-    uint256 bnCoinDayWeight = uint256(nValueIn) * nTimeWeight / COIN / (24 * 60 * 60);
+    uint256 bnCoinDayWeight = uint256(nValueIn) * nTimeWeight / COIN / (10);
     // Calculate hash
     CDataStream ss(SER_GETHASH, 0);
     uint64_t nStakeModifier = 0;
