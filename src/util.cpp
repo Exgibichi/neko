@@ -98,7 +98,7 @@ using namespace std;
 map<string, string> mapArgs;
 map<string, vector<string> > mapMultiArgs;
 bool fDebug = false;
-bool fPrintToConsole = false;
+bool fPrintToConsole = true;
 bool fPrintToDebugLog = true;
 bool fDaemon = false;
 bool fServer = false;
@@ -442,7 +442,7 @@ boost::filesystem::path GetDefaultDataDir()
     return GetSpecialFolderPath(CSIDL_APPDATA) / "Emercoin";
 #else
     struct passwd *pw_ptr = getpwuid(geteuid());
-    const char *pszHome = pw_ptr? pw_ptr->pw_dir : getenv("HOME"); 
+    const char *pszHome = pw_ptr? pw_ptr->pw_dir : getenv("HOME");
     fs::path pathRet((pszHome == NULL || *pszHome == 0)? "/" : pszHome);
 #ifdef MAC_OSX
     // Mac
