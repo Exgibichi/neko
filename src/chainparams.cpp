@@ -101,8 +101,8 @@ public:
         pchMessageStart[2] = 0x33;
         pchMessageStart[3] = 0x44;
         nDefaultPort = 6161;
-        bnProofOfWorkLimit = ~uint256(0) >> 5;
-        bnInitialHashTarget = ~uint256(0) >> 5;
+        bnProofOfWorkLimit = ~uint256(0) >> 20;
+        bnInitialHashTarget = ~uint256(0) >> 20;
         nEnforceBlockUpgradeMajority = 750;
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
@@ -113,8 +113,8 @@ public:
         // ppcoin: PoS spacing = nStakeTargetSpacing
         //         PoW spacing = depends on how much PoS block are between last two PoW blocks, with maximum value = nTargetSpacingMax
         nCoinbaseMaturity = 32;                       // coinbase transaction outputs can only be spent after this number of new blocks
-        nStakeTargetSpacing = 8 * 60;                // 8 minutes
-        nTargetSpacingMax = 12 * nStakeTargetSpacing; // ~2 hours
+        nStakeTargetSpacing = 60;                // 8 minutes
+        nTargetSpacingMax = 1 * nStakeTargetSpacing; // ~2 hours
         nStakeMinAge = 60;             // minimum age for coin age
         nStakeMaxAge = 90;             // stake age of full weight
         nStakeModifierInterval = 60;         // time to elapse before new modifier is computed
