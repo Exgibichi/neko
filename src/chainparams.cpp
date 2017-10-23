@@ -117,7 +117,7 @@ public:
         nTargetSpacingMax = 12 * nStakeTargetSpacing; // ~2 hours
         nStakeMinAge = 60;             // minimum age for coin age
         nStakeMaxAge = 90;             // stake age of full weight
-        nStakeModifierInterval = 6 * 60 * 60;         // time to elapse before new modifier is computed
+        nStakeModifierInterval = 60;         // time to elapse before new modifier is computed
         nMaxTipAge = 7 * 24 * 60 * 60;
 
         /**
