@@ -1250,7 +1250,7 @@ CAmount GetProofOfWorkReward(unsigned int nHeight)
 CAmount GetProofOfStakeReward(int64_t nCoinAge)
 {
     static int64_t nRewardCoinYear = 8 * CENT;  // creation amount per coin-year
-    int64_t nSubsidy = nCoinAge * 33 / (365 * 33 + 8) * nRewardCoinYear;
+    int64_t nSubsidy = nCoinAge * 33 / (1 * 1 + 8) * nRewardCoinYear;
     if (fDebug && GetBoolArg("-printcreation", false))
         LogPrintf("GetProofOfStakeReward(): create=%s nCoinAge=%lld\n", FormatMoney(nSubsidy), nCoinAge);
     return nSubsidy;
