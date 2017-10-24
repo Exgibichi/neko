@@ -173,8 +173,8 @@ new mainnet genesis hash: CBlock(hash=000027036a0c08bcc5705a8025481ddd6905fd6bd0
         assert(hashGenesisBlock == uint256("000027036a0c08bcc5705a8025481ddd6905fd6bd03567019f1844034b09b0c7"));
         assert(genesis.hashMerkleRoot == uint256("8db586d27703f1736c8c41322745ed82acd81fa7fab0e7215b7e1b0899277496"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = list_of(33);   // emercoin: addresses begin with 'E'
-        base58Prefixes[SCRIPT_ADDRESS] = list_of(92);   // emercoin: addresses begin with 'e'
+        base58Prefixes[PUBKEY_ADDRESS] = list_of(33);   // neko: addresses begin with 'E'
+        base58Prefixes[SCRIPT_ADDRESS] = list_of(92);   // neko: addresses begin with 'e'
         base58Prefixes[SECRET_KEY] =     list_of(128);
         base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x88)(0xB2)(0x1E);
         base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x88)(0xAD)(0xE4);

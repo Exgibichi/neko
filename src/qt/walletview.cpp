@@ -100,7 +100,7 @@ void WalletView::setBitcoinGUI(BitcoinGUI *gui)
         // Pass through transaction notifications
         connect(this, SIGNAL(incomingTransaction(QString,int,CAmount,QString,QString)), gui, SLOT(incomingTransaction(QString,int,CAmount,QString,QString)));
 
-        // emercoin:
+        // neko:
         connect(gui->labelEncryptionIcon, SIGNAL(clicked()), this, SLOT(on_labelEncryptionIcon_clicked()));
     }
 }
@@ -185,12 +185,12 @@ void WalletView::gotoSendCoinsPage(QString addr)
     if (!addr.isEmpty())
         sendCoinsPage->setAddress(addr);
 }
-
+/*
 void WalletView::gotoManageNamesPage()
 {
     setCurrentWidget(manageNamesPage);
 }
-
+*/
 void WalletView::gotoSignMessageTab(QString addr)
 {
     // calls show() in showTab_SM()

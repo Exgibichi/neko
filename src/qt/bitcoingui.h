@@ -36,7 +36,7 @@ class QProgressBar;
 class QProgressDialog;
 QT_END_NAMESPACE
 
-// emercoin : to ensure that we can click on lock icon in GUI
+// neko : to ensure that we can click on lock icon in GUI
 class ClickableLockLabel : public QLabel
 {
     Q_OBJECT
@@ -85,7 +85,7 @@ public:
     void removeAllWallets();
 #endif // ENABLE_WALLET
     bool enableWallet;
-    ClickableLockLabel *labelEncryptionIcon; // emercoin: changed from private to public
+    ClickableLockLabel *labelEncryptionIcon; // neko: changed from private to public
 
 protected:
     void changeEvent(QEvent *e);
@@ -198,7 +198,7 @@ private slots:
     /** Switch to send coins page */
     void gotoSendCoinsPage(QString addr = "");
     /** Switch to manage names page */
-    void gotoManageNamesPage();
+    //void gotoManageNamesPage();
 
     /** Show Sign/Verify Message dialog and switch to sign message tab */
     void gotoSignMessageTab(QString addr = "");

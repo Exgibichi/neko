@@ -167,12 +167,12 @@
         <translation>Mở &amp;URI...</translation>
     </message>
     <message>
-        <source>Emercoin Core client</source>
-        <translation>Emercoin Core client</translation>
+        <source>Neko core client</source>
+        <translation>Neko core client</translation>
     </message>
     <message>
-        <source>Emercoin</source>
-        <translation>Emercoin</translation>
+        <source>Neko</source>
+        <translation>Neko</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -207,12 +207,12 @@
         <translation>Trợ &amp;giúp</translation>
     </message>
     <message>
-        <source>Emercoin Core</source>
-        <translation>Emercoin Core</translation>
+        <source>Neko core</source>
+        <translation>Neko core</translation>
     </message>
     <message>
-        <source>&amp;About Emercoin Core</source>
-        <translation>&amp;Về Emercoin Core</translation>
+        <source>&amp;About Neko core</source>
+        <translation>&amp;Về Neko core</translation>
     </message>
     <message numerus="yes">
         <source>%n hour(s)</source>
@@ -374,16 +374,16 @@ Loại: %3
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Emercoin Core</source>
-        <translation>Emercoin Core</translation>
+        <source>Neko core</source>
+        <translation>Neko core</translation>
     </message>
     <message>
         <source>version</source>
         <translation>version</translation>
     </message>
     <message>
-        <source>About Emercoin Core</source>
-        <translation>Về Emercoin Core</translation>
+        <source>About Neko core</source>
+        <translation>Về Neko core</translation>
     </message>
     </context>
 <context>
@@ -393,8 +393,8 @@ Loại: %3
         <translation>Chào mừng</translation>
     </message>
     <message>
-        <source>Emercoin Core</source>
-        <translation>Emercoin Core</translation>
+        <source>Neko core</source>
+        <translation>Neko core</translation>
     </message>
     <message>
         <source>Error</source>
@@ -593,8 +593,8 @@ Loại: %3
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Emercoin Core</source>
-        <translation>Emercoin Core</translation>
+        <source>Neko core</source>
+        <translation>Neko core</translation>
     </message>
     </context>
 <context>
